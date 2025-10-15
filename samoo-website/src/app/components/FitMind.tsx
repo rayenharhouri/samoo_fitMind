@@ -52,7 +52,7 @@ export default function FitMind() {
                 </div>
                 <div className="bg-gray-100 p-4 rounded-lg">
                   <h4 className="font-semibold text-red-600 mb-2">🌟 Expertise Samoo</h4>
-                  <p className="text-sm">Basée sur l'expérience de champion et coach professionnel</p>
+                  <p className="text-sm">Basée sur l&apos;expérience de champion et coach professionnel</p>
                 </div>
               </div>
               

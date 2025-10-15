@@ -60,7 +60,7 @@ export default function About() {
             <div className="mt-8 bg-black text-white p-6 rounded-lg">
               <h4 className="font-bold text-lg mb-4">Certifications & Expertise</h4>
               <ul className="space-y-2 text-sm">
-                <li>• Coach personnel NASM & ISS</li>
+                <li>• Coach personnel NASM &amp; ISS</li>
                 <li>• Nutritionniste sportif INSP</li>
                 <li>• Expert WSDA – World Federation of Self Defense Armée</li>
                 <li>• Spécialiste de l'entraînement Hyrox</li>

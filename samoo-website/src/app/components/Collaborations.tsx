@@ -16,7 +16,7 @@ export default function Collaborations() {
             Collaborations & Partenaires
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            En collaboration avec les meilleurs acteurs du sport et du bien-être en Tunisie et à l'international.
+            En collaboration avec les meilleurs acteurs du sport et du bien-être en Tunisie et à l&apos;international.
           </p>
         </div>
 

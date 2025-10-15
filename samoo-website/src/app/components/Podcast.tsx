@@ -12,7 +12,7 @@ export default function Podcast() {
           <h2 className="text-4xl md:text-5xl font-black mb-6">
             <span className="text-red-600">Dima Sport Podcast</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-4">Le mental du sport en action</p>
+          <p className="text-xl text-gray-300 mb-4">Le mental du sport en action</p>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg leading-relaxed mb-8">
               Bienvenue dans votre podcast Dima Sport : ta dose hebdomadaire de motivation et de leçons de vie 
