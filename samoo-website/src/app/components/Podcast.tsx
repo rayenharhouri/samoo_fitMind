@@ -9,6 +9,7 @@ export default function Podcast() {
     <section id="podcast" className="py-20 bg-black text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
+          <img src="/dima_sport.jpg" alt="Dima Sport Podcast" className="w-32 h-32 mx-auto mb-6 rounded-full" />
           <h2 className="text-4xl md:text-5xl font-black mb-6">
             <span className="text-red-600">Dima Sport Podcast</span>
           </h2>

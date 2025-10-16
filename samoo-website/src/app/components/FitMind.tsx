@@ -3,6 +3,7 @@ export default function FitMind() {
     <section id="fitmind" className="py-20 hero-gradient text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
+          <img src="/firmind.jpg" alt="FitMind AI" className="w-32 h-32 mx-auto mb-6 rounded-full" />
           <h2 className="text-4xl md:text-5xl font-black mb-6">
             FitMind AI
           </h2>
