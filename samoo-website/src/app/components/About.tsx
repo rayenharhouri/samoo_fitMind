@@ -1,4 +1,18 @@
+"use client";
+import { useState } from "react";
+
 export default function About() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const images = ["/image1.png", "/image2.png", "/image3.png"];
+  
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
+  
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   const achievements = [
     { year: "2005", title: "Champion Arabe Junior", location: "Égypte", medal: "🥇", category: "+80kg" },
     { year: "2005", title: "2e place Championnat Méditerranéen", location: "Malte", medal: "🥈" },
@@ -20,6 +34,20 @@ export default function About() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-6 text-black">Who is Samoo Oussema?</h2>
+          <div className="relative max-w-lg mx-auto mb-8">
+            <img src={images[currentImage]} alt="Samoo Oussema" className="w-full h-[500px] object-cover rounded-lg" />
+            <button onClick={prevImage} className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70">
+              ←
+            </button>
+            <button onClick={nextImage} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70">
+              →
+            </button>
+            <div className="flex justify-center mt-4 gap-2">
+              {images.map((_, index) => (
+                <button key={index} onClick={() => setCurrentImage(index)} className={`w-3 h-3 rounded-full ${currentImage === index ? 'bg-red-600' : 'bg-gray-300'}`} />
+              ))}
+            </div>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 mb-16">

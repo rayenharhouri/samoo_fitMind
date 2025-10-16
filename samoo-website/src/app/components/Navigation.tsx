@@ -9,8 +9,11 @@ export default function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="#" className="text-white text-xl font-black">
-              Samoo <span className="text-red-500">Oussema</span>
+            <a href="#" className="flex items-center gap-3">
+              <img src="/samo.jpg" alt="Samoo Oussema" className="w-10 h-10 rounded-full" />
+              <span className="text-white text-xl font-black">
+                Samoo <span className="text-red-500">Oussema</span>
+              </span>
             </a>
           </div>
           

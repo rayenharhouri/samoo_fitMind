@@ -1,0 +1,13 @@
+[build]
+  command = "cd samoo-website && npm run build"
+  publish = "samoo-website/.next"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.processing]
+  skip_processing = false
