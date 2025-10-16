@@ -1,6 +1,6 @@
 [build]
-  command = "cd samoo-website && npm run build"
-  publish = "samoo-website/.next"
+  command = "npm run build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "18"
