@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Podcast from './components/Podcast';
 import FitMind from './components/FitMind';
-import News from './components/News';
+import Formation from './components/Formation';
 import Collaborations from './components/Collaborations';
 import ComingSoon from './components/ComingSoon';
 import Footer from './components/Footer';
@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <Podcast />
       <FitMind />
-      <News />
+      <Formation />
       <Collaborations />
       <ComingSoon />
       <Footer />

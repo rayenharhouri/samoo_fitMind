@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function About() {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = ["/1.jpg", "/2.jpg", "/3.webp", "/5.jpg", "/7.jpg", "/8.jpg"];
+  const images = ["/new.png"];
   
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
@@ -12,15 +12,6 @@ export default function About() {
   const prevImage = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
-
-  const achievements = [
-    { year: "2005", title: "Champion Arabe Junior", location: "Égypte", medal: "🥇", category: "+80kg" },
-    { year: "2005", title: "2e place Championnat Méditerranéen", location: "Malte", medal: "🥈" },
-    { year: "2005", title: "3e place par équipe – Championnat du Monde", location: "France", medal: "🥉" },
-    { year: "2006", title: "1ère place – Jeux Islamiques Seniors", location: "Arabie Saoudite", medal: "🥇" },
-    { year: "2007", title: "Championnat d'Afrique Senior", location: "Nigeria", medal: "🥉" },
-    { year: "2009/2011", title: "Champion de Tunisie Senior", location: "Tunisie", medal: "🥇", category: "-84/+84" }
-  ];
 
   const career = [
     { period: "2004–2011", title: "Athlète de l'équipe nationale de karaté", icon: "🥋" },
@@ -35,7 +26,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-6 text-black">Who is Samoo Oussema?</h2>
           <div className="relative max-w-lg mx-auto mb-8">
-            <img src={images[currentImage]} alt="Samoo Oussema" className="w-full h-[500px] object-cover rounded-lg" />
+            <img src={images[currentImage]} alt="Samoo Oussema" className="w-full h-[500px] object-contain rounded-lg bg-gray-100" />
             <button onClick={prevImage} className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70">
               ←
             </button>
@@ -50,27 +41,9 @@ export default function About() {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="max-w-4xl mx-auto">
           <div className="animate-fade-in">
-            <h3 className="text-2xl font-bold mb-8 text-red-600">Palmarès International</h3>
-            <div className="space-y-4">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <div className="flex items-center gap-4">
-                    <span className="text-3xl">{achievement.medal}</span>
-                    <div>
-                      <h4 className="font-semibold text-lg text-black">{achievement.title}</h4>
-                      <p className="text-black">{achievement.location} • {achievement.year}</p>
-                      {achievement.category && <p className="text-sm text-red-600 font-medium">{achievement.category}</p>}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="animate-fade-in">
-            <h3 className="text-2xl font-bold mb-8 text-red-600">Parcours Professionnel</h3>
+            <h3 className="text-2xl font-bold mb-8 text-red-600 text-center">Parcours Professionnel</h3>
             <div className="space-y-6">
               {career.map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -95,6 +68,12 @@ export default function About() {
                 <li>• Créateur du Podcast Dima Sport</li>
                 <li>• Co-fondateur de FitMind AI</li>
               </ul>
+            </div>
+            
+            <div className="text-center mt-8">
+              <a href="/achievements" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                Voir Palmarès International
+              </a>
             </div>
           </div>
         </div>
